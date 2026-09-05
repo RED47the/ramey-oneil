@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Projects | Ramey &amp; O'Neil</title>
+
+<style>
+
+*{
+	margin:0;
+	padding:0;
+	box-sizing:border-box;
+}
+
+html{
+	scroll-behavior:smooth;
+}
+
+body{
+	font-family:Arial, Helevetica, sans-serif;
+	background:#ffffff;
+	color:#555555
+}
+
+/*
+	Navigation
+*/
+
+.navbar{
+	height:82px;
+	background:#252525;
+	display:flex;
+	align-items:center;
+	justify-content:space-between;
+	padding:0 32px;
+	position:relative;
+	z-index:1000;
+}
+
+.logo{
+	width:270px;
+	height:58px;
+	object-fit:contain;
+}
+
+.menu-button{
+	width:58px;
+	height:52px;
+	border:1px solid #444444;
+	border-radius:4px;
+	background:#2c2c2c;
+	display:flex;
+	flex-direction:column;
+	align-items:center;
+	justify-content:center;
+	gap:7px;
+	cursor:pointer;
+}
+
+.menu-button span{
+	display:block;
+	width:30px;
+	height:3px;
+	background:#b9b9ad;
+	border-radius:2px;
+}
+
+.dropdown-menu{
+	display:none;
+	position:absolute;
+	top:82px;
+	right:20px;
+	width:220px;
+	background:#252525;
+	border:1px solid #444444;
+	box-shadow:0 8px 20px rgba(0,0,0,.35);
+}
+
+.dropdown-menu.show{
+	display:block;
+}
+
+.dropdown-menu a{
+	display:block;
+	padding:16px 20px;
+	color:#ffffff;
+	text-decoration:none;
+	border-bottom:1px solid #3f3f3f;
+}
+
+.dropdown-menu a:hover{
+	background:#3a3a3a;
+}
+
+/*
+	Hero
+*/
+
+.projects-hero{
+	min-height:370px;
+	display:flex;
+	align-items:center;
+	justify-content-center;
+
+	background:
+	linear-gradient(
+		rgba(20,25,32,.48),
+		rgba(20,25,32,.48)
+	),
+	url("main.jpg");
+
+	background-size:cover;
+	background-position:center;
+	background-repeat:no-repeat;
+
+	text-align:center;
+	color:#ffffff;
+}
+
+.projects-hero-content{
+	padding:40px;
+}
+
+.projects-hero-content h1{
+	margin-bottom:14px;
+	font-size:50px;
+	font-weight:600;
+	text-shadow:0 2px 5px rgba(0,0,0,.6);
+}
+
+.projects-hero-content p{
+	font-size:22px;
+	font-weight:500;
+	text-shadow:0 2px 5px rgba(0,0,0,.6);
+}
+
+/*
+	Introduction
+*/
+
+.projects-intro{
+	width:100%;
+	max-width:950px;
+	margin:auto;
+	padding:65px 40px;
+}
+
+.projects-intro h2{
+	margin-bottom:18px;
+	color:#555555;
+	font-size:38px;
+	font-weight:400;
+}
+
+.projects-intro p{
+	color:#666666;
+	font-size:18px;
+	line-height:1.75;
+}
+
+/*
+	Project Sections
+*/
+
+.project{
+	width:100%;
+	max-width:1050px;
+	margin:0 auto 80px;
+	padding:50px 40px;
+	border-top:1px solid #d7d7d7;
+}
+
+.project h2{
+	margin-bottom:10px;
+	color:#444444;
+	font-size:34px;
+	font-weight:400;
+}
+
+.home-button{
+	color:white;
+	text-decoration:none;
+	font-size:18px;
+	padding:12px 22px;
+	border:1px solid #555;
+	border-radius:4px;
+	background:#2c2c2c;
+}
+
+.home-button:hover{
+	background:#383838;
+}
+
+.project-location{
+	margin-bottom:22px;
+	color:#888888;
+	font-size:18px;
+}
+
+.project-description{
+	margin-bottom:32px;
+	color:#666666;
+	font-size:18px;
+	line-height:1.75;
+}
+
+/*
+	Galleries
+*/
+
+.project-gallery{
+	display:grid;
+	grid-template-columns:repeat(2,1fr);
+	gap:18px;
+}
+
+.project-gallery img{
+	display:block;
+	width:100%;
+	height:300px;
+	object-fit:cover;
+	border-radius:6px;
+	box-shadow:0 4px 14px rgba(0,0,0,.15);
+}
+
+/*
+	Footer
+*/
+
+footer{
+	padding:25px;
+	background:#1c1c1c;
+	color:#aaaaaa;
+	text-align:center;
+	font-size:14px;
+}
+
+/*
+	Mobile
+*/
+
+@media(max-width:700px){
+
+	.navbar{
+		padding:0 18px;
+	}
+
+	.logo{
+		width:220px;
+	}
+
+	.projects-hero-content h1{
+		font-size:40px;
+	}
+
+	.projects-hero-content p{
+		font-size:18px;
+	}
+
+	.projects-intro{
+		padding:50px 25px;
+	}
+
+	.project{
+		padding:40px 25px;
+	}
+
+	.project-gallery{
+		grid-template-columns:1fr;
+	}
+
+	.project-gallery img{
+		height:260px;
+	}
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header class="navbar">
+
+	<img
+		class="logo"
+		src="tim.png"
+		alt="Ramey &amp; O'Neil Logo"
+	>
+
+<a class="home-button" href="index.html">
+	Home
+</a>
+
+</header>
+
+<main>
+
+<section class="projects-hero">
+
+	<div class="projects-hero-content">
+
+		<h1>
+			Projects
+		</h1>
+
+		<p>
+			From Concept to Completion, We Deliver
+		</p>
+
+	</div>
+
+</section>
+
+<section class="projects-intro">
+
+	<h2>
+		Projects
+	</h2>
+
+	<p>
+		Our projects showcase a diverse portfolio of residential homes built with exceptional craftsmanship, thoughtful design, and meticulous attention to detail. Every project reflects our commitment to creating homes that are beautiful, functional, and built to last.
+	</p>
+
+</section>
+
+<!
+	Project One
+>
+
+<section class="project">
+
+	<h2>
+		325 Ranch Heights | Bulverde, Texas
+	</h2>
+
+	<p class="project-description">
+		This contemporary custom home in Stone Creek Ranch showcases our industry-leading quality from every angle. Completed in just 5.5 months, this 4,100-square-foot residence features soaring ceilings with custom ceiling treatments, expansive glass, and a clean Hill Country modern exterior. Thoughtful architecture, precision craftsmanship, and a seamless indoor-outdoor connection make this home a standout in one of Boerne’s most sought-after communities.
+	</p>
+
+	<div class="project-gallery">
+
+		<img
+			src="image5.jpeg"
+			alt="Project One Image 1"
+		>
+
+		<img
+			src="325_ranch_photo_2.jpg"
+			alt="Project One Image 2"
+		>
+
+		<img
+			src="325_ranch_photo_3.jpg"
+			alt="Project One Image 3"
+		>
+
+		<img
+			src="325_ranch_photo_5.jpg"
+			alt="Project One Image 4"
+		>
+
+	</div>
+
+</section>
+
+<!
+	Project Two
+>
+
+<section class="project">
+
+	<h2>
+		Twine by Daisy and Vine | Bulverde, Texas
+	</h2>
+
+	<p class="project-description">
+		A 4,000 sq. ft. luxury wine and cigar bar built on an 11-acre development in downtown Bulverde. Completed in just 7 months, this high-end project features custom interior and exterior finishes, a walk-in wine cooler, walk-in cigar humidor, professionally designed commercial kitchen, 2,000 sq. ft. outdoor cigar lounge, and a live music stage. Our team used creativity and experience to deliver an elevated, timeless space that anchors a multi-phase development - including an Italian restaurant breaking ground in December.
+	</p>
+
+<div class="project-gallery">
+
+	<img
+		src="twine_photo_5.jpg"
+		alt="Project Two Image 1"
+	>
+
+	<img
+		src="twine_photo_2.jpg"
+		alt="Project Two Image 2"
+	>
+
+	<img
+		src="twine_photo_3.jpg"
+		alt="Project Two Image 3"
+	>
+
+	<img
+		src="twine_photo_4.jpg"
+		alt="Project Two Image 4"
+	>
+
+</div>
+
+</section>
+
+<main>
+
+<footer>
+	Copyright 2026 Ramey &amp; O'Neil.
+	All rights reserved.
+</footer>
+
+<script>
+
+const menuButton =
+	document.getElementByld("menuButton");
+
+const dropdownMenu =
+	document.getElementByld("dropdownMenu");
+
+menuButton.addEventListener(
+	"click"
+	function(){
+
+		dropdownMenu.classList.toggle("show");
+
+		const isOpen =
+			dropdownMenu.classList.contains("show");
+
+		menuButton.setAttribute(
+			"aria-expanded",
+			isOpen
+		);
+	}
+);
+
+document.addEventListener(
+	"click",
+	function(event){
+
+		const clickedInsideMenu =
+			dropdownMenu.contains(event.target) ||
+			menuButton.contains(event.target);
+
+		if(!clickedInsideMenu){
+
+			dropdownMenu.classList.remove("show");
+
+			menuButton.setAttribute(
+				"aria-expanded",
+				"false"
+			);
+		}
+	}
+);
+
+</script>
+
+</body>
+
+</html>
